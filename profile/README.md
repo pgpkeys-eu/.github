@@ -1,7 +1,5 @@
 ## PGPkeys EU
 
-Building a distributed keyserver distribution network.
-
 ### SKS
 
 SKS is both a software package (herein called [sks-keyserver](https://github.com/SKS-keyserver/sks-keyserver) for clarity), and the database synchronisation protocol that it speaks.
