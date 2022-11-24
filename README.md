@@ -1,1 +1,1 @@
-Mastodon: https://infosec.exchange/@pgpkeys
+# PGPkeys EU
