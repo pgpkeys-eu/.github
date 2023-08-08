@@ -38,4 +38,4 @@ Work to fix this is part of our brief here.
 
 * PGPkeys EU keyserver: https://pgpkeys.eu
 * SKS network spider: https://spider.pgpkeys.eu
-* Mastodon: https://infosec.exchange/@pgpkeys
+* Mastodon: <a rel="me" href="https://infosec.exchange/@pgpkeys">https://infosec.exchange/@pgpkeys</a>
