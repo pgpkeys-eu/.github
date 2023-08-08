@@ -2,17 +2,14 @@
 
 ### SKS
 
-SKS is both a software package (herein called [sks-keyserver](https://github.com/SKS-keyserver/sks-keyserver) for clarity), and the database synchronisation protocol that it speaks.
-The software is effectively end of life; the protocol is not.
+SKS refers to both a software package (herein called [sks-keyserver](https://github.com/SKS-keyserver/sks-keyserver) for clarity), and the database synchronisation protocol that it speaks.
+The sks-keyserver software is effectively end of life; the SKS protocol is not.
 There are several other software packages that speak SKS, notably [Hockeypuck](https://github.com/hockeypuck/hockeypuck), and also [Peaks](https://github.com/r4yan2/peaks) (experimental).
 
 ### Synchronising and non-synchronising keyservers
 
-https://keys.openpgp.org does not sync with any other keyserver. It never has, and likely never will.
-There are several other keyservers, such as the Mailvelope keyserver, that are (and always have been) similarly standalone.
-
-But the synchronising keyservers still exist, and still sync with each other - this has not changed.
-What has changed is threefold:
+The synchronising keyserver network is still operational, but has changed significantly in the last few years.
+The main changes are:
 
 1. the vast majority have been ported from sks-keyserver to hockeypuck, which has mitigated their stability issues
 1. the sks-keyservers.net round-robin domain name has fallen into disuse due to legal uncertainty
@@ -21,8 +18,26 @@ What has changed is threefold:
 If you want to use a synchronising keyserver, you have to pick a specific provider from the list at https://spider.pgpkeys.eu.
 Many people (including upstream gnupg) use https://keyserver.ubuntu.com because it has a good reputation for reliability, but it is not the only such choice.
 
-Unfortunately, if you want to be comprehensive you will have to manually iterate through each of the keyserver systems (synchronising and standalone).
-But that was strictly true even before keys.openpgp.org - it’s just more noticeable now because so many distros use it by default.
+In addition, there are several [non-synchronising keyservers](https://github.com/pgpkeys-eu/.github/wiki/Non-synchronising-keyservers) in common use, the best-known of which is https://keys.openpgp.org .
+Unfortunately, there is currently no way to exhaustively search these keyservers for a given key without manually iterating through them.
+
+All synchronising keyservers and most non-synchronising keyservers speak HKP, the de-facto standard keyserver lookup protocol supported by most OpenPGP clients.
+
+### WKD and HKP
+
+[Web Key Directory (WKD)](https://wiki.gnupg.org/WKD) is a modern key discovery protocol, however it is not a like-for-like replacement for HKP.
+HKP keyservers and WKD are complementary protocols:
+
+Feature                                               | HKP    | WKD
+------------------------------------------------------|--------|--------
+Key lookup by email userID                            | yes    | yes(1)
+Key lookup by non-email userID                        | yes    | no
+Key lookup by keyID/fingerprint                       | yes    | no
+Key owner controls own key (self-sovereignty)         | no     | yes
+Distribution of revocations                           | yes    | maybe(2)
+
+1. WKD only works if the domain owner implements it.
+2. Revocations are only distributed over WKD if the key owner specifically uploads them
 
 ### Background
 
