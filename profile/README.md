@@ -17,8 +17,7 @@ The main changes are:
 
 If you want to use a synchronising keyserver, you have to pick a specific provider from the list at https://spider.pgpkeys.eu.
 Many people (including upstream gnupg) use https://keyserver.ubuntu.com because it has a good reputation for reliability, but it is not the only such choice.
-
-In addition, there are several [non-synchronising keyservers](https://github.com/pgpkeys-eu/.github/wiki/Non-synchronising-keyservers) in common use, the best-known of which is https://keys.openpgp.org .
+In addition, there are several [non-synchronising keyservers](https://github.com/pgpkeys-eu/.github/wiki/Non%E2%80%90synchronising-keyservers) in common use, the best-known of which is https://keys.openpgp.org .
 Unfortunately, there is currently no way to exhaustively search these keyservers for a given key without manually iterating through them.
 
 All synchronising keyservers and most non-synchronising keyservers speak HKP, the de-facto standard keyserver lookup protocol supported by most OpenPGP clients.
