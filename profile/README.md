@@ -26,7 +26,7 @@ But that was strictly true even before keys.openpgp.org - it’s just more notic
 
 ### Background
 
-The [SKS apocalypse](https://lists.gnu.org/archive/html/sks-devel/2018-05/msg00055.html) rendered the sks-keyserver software effectively unusable.
+The [SKS apocalypse](https://lists.gnu.org/archive/html/sks-devel/2018-05/msg00055.html) rendered the sks-keyserver software [effectively unusable](https://github.com/SKS-Keyserver/sks-keyserver/issues/57).
 There are a few old systems still maintained as public-facing services but these are now in a distinct minority.
 
 [Hockeypuck](https://hockeypuck.io) v2.1 and later mitigates the immediate problem by applying size limits to public keys.
@@ -38,4 +38,4 @@ Work to fix this is part of our brief here.
 
 * PGPkeys EU keyserver: https://pgpkeys.eu
 * SKS network spider: https://spider.pgpkeys.eu
-* Mastodon: <a rel="me" href="https://infosec.exchange/@pgpkeys">https://infosec.exchange/@pgpkeys</a>
+* Mastodon: https://infosec.exchange/@pgpkeys
