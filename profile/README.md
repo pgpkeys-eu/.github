@@ -20,12 +20,11 @@ Many people (including upstream gnupg) use https://keyserver.ubuntu.com because 
 In addition, there are several [non-synchronising keyservers](https://github.com/pgpkeys-eu/.github/wiki/Non%E2%80%90synchronising-keyservers) in common use, the best-known of which is https://keys.openpgp.org .
 Unfortunately, there is currently no way to exhaustively search these keyservers for a given key without manually iterating through them.
 
-All synchronising keyservers and most non-synchronising keyservers speak HKP, the de-facto standard keyserver lookup protocol supported by most OpenPGP clients.
+### HKP and WKD
 
-### WKD and HKP
-
+All synchronising keyservers and most non-synchronising keyservers speak [HTTP Keyserver Protocol (HKP)](https://datatracker.ietf.org/doc/html/draft-shaw-openpgp-hkp-00), the de-facto standard keyserver lookup protocol supported by most OpenPGP clients.
 [Web Key Directory (WKD)](https://wiki.gnupg.org/WKD) is a modern key discovery protocol, however it is not a like-for-like replacement for HKP.
-HKP keyservers and WKD are complementary protocols:
+HKP keyservers and WKD keystores are complementary protocols:
 
 Feature                                               | HKP    | WKD
 ------------------------------------------------------|--------|--------
